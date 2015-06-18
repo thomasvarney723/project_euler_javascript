@@ -12,6 +12,8 @@
     return currentNumb;
 })(20);
 
+
+// variable table to help me think about process
 /*
 numb    divisor
 6       5

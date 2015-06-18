@@ -1,3 +1,9 @@
+/*
+2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.
+
+What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
+*/
+
 (function smallestNumberDivisibleByNumbersOneThrough(numb) {
     currentNumb = numb;
     currentDivisor = numb - 1;
@@ -12,25 +18,4 @@
     return currentNumb;
 })(20);
 
-
-// variable table to help me think about process
-/*
-numb    divisor
-6       5
-12      5
-18      5
-24      5
-30      5
-30      4
-36      5
-42      5
-48      5
-54      5
-60      5
-60      4
-60      3
-60      2
-60      1
-return numb
-
-*/
+// Answer: 232792560

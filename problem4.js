@@ -37,7 +37,7 @@ function reverse(a) {
 }
 
 /* Limiting i and j within the for loop to half of numb and zero respectively, 
-   shortens evaluation time a bit while still working for numb = 10 and numb = 1
+   shortens evaluation time a bit while still working for numb = 10 and numb = 1.
    The closer to the value of numb i and j are, the faster the evaluation time.*/
 
 // Answer: 906609

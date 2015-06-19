@@ -14,21 +14,21 @@ function palendrome(){
     return palArray.filter(isPalendrome).sort();
 }
 
-function isPalendrome(str) {
-    var stringy = String(str);
-    var firstLetterCounter = 0;
-    var secondLetterCounter = 1;
-    var firstLetter = stringy.charAt(firstLetterCounter);
-    var secondLetter = stringy.charAt(stringy.length - secondLetterCounter);
-    while(firstLetterCounter < (stringy.length / 2)) {
-        if(firstLetter !== secondLetter) {
-            return false;
-        } else {
-            firstLetterCounter++;
-            secondLetterCounter++;
-        }
+function isPalendrome(a) {
+    if(a.split().join() === reverse(a).join("")) {
+        return true;
+    } else {
+        return false;
     }
-    return true;
 }
 
-palendrome();
+function reverse(a) {
+    var stringed = String(a);
+    var arrayed = stringed.split("");
+    var arrayedLength = arrayed.length;
+    var reversed = [];
+    for(var i = 0; i < arrayedLength; i++) {
+        reversed.push(arrayed.pop());
+    }
+    return reversed;
+}

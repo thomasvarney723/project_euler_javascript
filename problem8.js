@@ -26,3 +26,8 @@ casting an Array of thirteen strings to a number everytime a product is
 computed. However this seemed to be blazingly fast anyway, so I'll leave it be 
 for now.
 */
+/*
+I think it could be further oprimized by initially splicing the array of numbers
+ into subarrays by splitting on 0. Any subarray not thirteen digits in length
+would be ignored.
+*/

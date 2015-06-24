@@ -19,3 +19,10 @@ var bigNumberString = "731671765313306249192251196744265747423553491949349698352
 })(bigNumberString);
 
 // Answer: 23514624000
+
+/*
+I think this could be optimized by operating on an Array of numbers instead of 
+casting an Array of thirteen strings to a number everytime a product is 
+computed. However this seemed to be blazingly fast anyway, so I'll leave it be 
+for now.
+*/

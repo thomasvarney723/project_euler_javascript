@@ -2,16 +2,15 @@
 Work out the first ten digits of the sum of the following one-hundred 50-digit numbers.
 */
 
-function firstTenDigitsOfSumOf(array) {
-    var firstFour = array.map(
-	function(string) {
-            return string.substring(0, 11);
-        });
-    return firstFour.map(Number)
-	            .reduce(function(a, b) {
-                                return a + b;
-                            });
-}
+(function firstTenDigitsOfSumOf(array) {
+    var firstFour = array.map(function(string) {
+                                return string.substring(0, 11);
+                    });
+    return String(firstFour.map(Number)
+                           .reduce(function(a, b) {
+                                     return a + b;
+                                  })).substring(0,10);
+})(arr);
 
 var arr = ["37107287533902102798797998220837590246510135740250",
 "46376937677490009712648124896970078050417018260538",

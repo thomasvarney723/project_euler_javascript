@@ -22,12 +22,11 @@ var bigNumberString = "731671765313306249192251196744265747423553491949349698352
 
 /*
 I think this could be optimized by operating on an Array of numbers instead of 
-casting an Array of thirteen strings to a number everytime a product is 
-computed. However this seemed to be blazingly fast anyway, so I'll leave it be 
-for now.
+casting an Array of thirteen strings to numbers everytime a product is computed.
+ However, this seemed to be blazingly fast anyway, so I'll leave it be for now.
 */
 /*
-I think it could be further oprimized by initially splicing the array of numbers
+I think it could be further optimized by initially slicing the array of numbers
  into subarrays by splitting on 0. Any subarray not thirteen digits in length
 would be ignored.
 */

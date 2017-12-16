@@ -43,3 +43,30 @@ candi   divsor  countofPrimes
 */
 
 // Answer: 104743
+
+
+// original (above) on Jun 18 2015
+// re-write (below) on Dec 16 2017
+// 10x speedup and less memory usage
+
+function nthPrime(nth) {
+    function isPrime(n) {
+	var divisor = 2;
+	while (divisor < ((n / 2) + 1)) {
+	    if (n % divisor === 0)
+		return false;
+	    divisor ++;
+	}
+	return true;
+    }
+    if (nth < 1) return null;
+    if (nth === 1) return 2;
+    var current = 3;
+    var count = 2;
+    while (count < nth) {
+	current += 2;
+	if (isPrime(current))
+	    count++;
+    }
+    return current;
+}

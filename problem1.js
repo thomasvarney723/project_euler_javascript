@@ -24,8 +24,8 @@ Find the sum of all the multiples of 3 or 5 below 1000.
 // the functional version turned out to be fast too
 
 function answer() {
-    var current = 0;
-    var accumulator = 0;
+    let current = 0;
+    let accumulator = 0;
     while (current < 1000) {
 	if (current % 3 === 0 || current % 5 === 0)
 	    accumulator += current;

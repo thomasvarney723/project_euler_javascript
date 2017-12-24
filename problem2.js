@@ -24,7 +24,9 @@ By considering the terms in the Fibonacci sequence whose values do not exceed fo
 // Answer: 4613732
 
 
+// original on Jun 17 2015
 // re-write on Dec 24 2017:
+// same speed as original
 
 function answer(n) {
     return (function recur(fibs) {

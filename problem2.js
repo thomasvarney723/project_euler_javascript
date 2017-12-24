@@ -22,3 +22,19 @@ By considering the terms in the Fibonacci sequence whose values do not exceed fo
 })(4000000);
 
 // Answer: 4613732
+
+
+// re-write on Dec 24 2017:
+
+function answer(n) {
+  return (function recur(fibs) {
+            const [a, b] = fibs.slice(-2);
+            if (a + b < n) {
+              fibs.push(a + b); 
+              return recur(fibs);
+            } else {
+              return fibs;
+            }
+          })([1, 2])
+    .reduce((a, b) => b % 2 === 0 ? a + b : a, 0);
+}

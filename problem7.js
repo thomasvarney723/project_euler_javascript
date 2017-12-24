@@ -51,7 +51,7 @@ candi   divsor  countofPrimes
 
 function nthPrime(nth) {
     function isPrime(n) {
-	var divisor = 2;
+	let divisor = 2;
 	while (divisor < ((n / 2) + 1)) {
 	    if (n % divisor === 0)
 		return false;
@@ -61,8 +61,8 @@ function nthPrime(nth) {
     }
     if (nth < 1) return null;
     if (nth === 1) return 2;
-    var current = 3;
-    var count = 2;
+    let current = 3;
+    let count = 2;
     while (count < nth) {
 	current += 2;
 	if (isPrime(current))

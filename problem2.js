@@ -32,7 +32,7 @@ function answer(n) {
     return (function recur(fibs) {
         const [a, b] = fibs.slice(-2);
 	if (a + b < n)
-	    { fibs.push(a + b); return recur(fibs) } // .push returns length :(
+	    return recur( fibs.concat([a + b]) );
             else return fibs;
     })([1, 2])
 	.reduce((a, b) => b % 2 === 0 ? a + b : a, 0);

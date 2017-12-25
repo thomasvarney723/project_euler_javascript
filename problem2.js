@@ -30,9 +30,9 @@ By considering the terms in the Fibonacci sequence whose values do not exceed fo
 
 function answer(n) {
     return (function recur(fibs) {
-        const [a, b] = fibs.slice(-2);
-	if (a + b < n)
-	    return recur( fibs.concat([a + b]) );
+        const [f1, f2] = fibs.slice(-2);
+	if (f1 + f2 < n)
+	    return recur( fibs.concat([f1 + f2]) );
             else return fibs;
     })([1, 2])
 	.reduce((a, b) => b % 2 === 0 ? a + b : a, 0);

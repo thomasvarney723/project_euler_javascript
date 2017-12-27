@@ -35,3 +35,15 @@ Find the difference between the sum of the squares of the first one hundred natu
 })(100);
 
 // Answer: 25164150
+
+
+// original above written on Jun 17 2015
+// re-write below written on Dec 27 2015
+// same speed as original
+
+function answer(nat) {
+    const sum    = arr => arr.reduce((x, y) => x + y, 0);
+    const square = num => num * num;
+    const nats   = [...Array(nat + 1).keys()];  // zero won't affect the result
+    return square(sum(nats)) - sum(nats.map(square));
+}
